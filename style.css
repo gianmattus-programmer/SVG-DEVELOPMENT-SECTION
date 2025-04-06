@@ -1,0 +1,247 @@
+/*============Variables Raíz============*/
+ :root {
+    --primary-color: #017cfb; 
+    --background-color: #111;
+    --text-color: #fff;
+    --dull-color: #2e3641;
+    --dull-text-color: #aaa;
+    --dull-icon-color: #777;
+    --dull-paragraph-color: #737880;
+    --glow-effect: 0 0 30px rgba(1, 124, 251, 1);
+}
+
+/*============Reinicio Global============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*============Estilo del Cuerpo============*/
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background-color);
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*============Estilo del Contenedor============*/
+.container {
+    position: fixed;
+    top: 10%;
+    text-align: center;
+}
+
+/*============Estilo de Encabezados============*/
+
+h5{
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-transform: lowercase;
+    margin-bottom: 30px;
+}
+
+h5::before,
+h5::after{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+h1::after{
+    content: ".";
+    color: var(--primary-color);
+}
+
+/*============Contenedor SVG============*/ 
+
+.s0 { fill: none;stroke: #0000ff;stroke-miterlimit:100;stroke-width: 5 } 
+
+.svg-container{
+    position: fixed;
+    padding: 50px 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+svg{
+    display: block;
+    width: 100%;
+    height: 100%; 
+}
+
+/*============Pasos============*/ 
+
+.steps{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    gap: 50px;
+    margin: auto;
+    position: relative;
+}
+
+/*============Paso============*/ 
+
+.step{
+    width: 30%;
+    text-align: center;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.st{
+    width: 0;
+}
+
+/*============ICONO============*/
+.icon{
+    width: 60px;
+    height: 60px;
+    background: var(--dull-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: auto;
+    font-size: 24px;
+    color: var(--dull-icon-color);
+    transition: all 0.5s ease;
+}
+
+/*============NÚMERO============*/ 
+
+.number{
+    font-size: 120px;
+    color: transparent;
+    background: linear-gradient(180deg, var(--dull-color), transparent);
+    position: absolute;
+    display: inline-block;
+    width: fit-content;
+    background-clip: text;
+    -webkit-background-clip: text;
+    top: -10px;
+    left: 55%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+h3{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dull-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+p{
+    font-size: 16px;
+    color: var(--dull-paragraph-color);
+    text-align: left;
+    line-height: 1.5;
+    transition: all 0.5s ease;
+}
+
+/*============Paso-1============*/ 
+
+.step-1 {
+    margin-top: -0px;
+}
+
+.step-1 .icon {
+    margin: 55px 0 0 240px;
+}
+
+.step-1 .number {
+    top: -70px;
+    left: 230px;
+}
+
+/*============Paso-2============*/ 
+
+.step-2 {
+    margin-top: 50px;
+}
+
+.step-2 .icon {
+    margin: -230px 0 150px 150px;
+}
+
+.step-2 .number {
+    top: -70px;
+    left: 280px;
+}
+
+/*============Paso-3============*/ 
+
+.step-3 {
+    margin-top: 300px;
+}
+
+.step-3 .icon {
+    margin: -200px 0 150px 130px;
+}
+
+.step-3 .number {
+    top: -70px;
+    left: 250px;
+}
+
+/*============ESTILO DE PASOS ACTIVOS============*/ 
+
+.step.active .icon{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    box-shadow: var(--glow-effect);
+}
+
+.step.active h3{
+    color: var(--primary-color);
+}
+
+.step.active p{
+    color: var(--text-color);
+}
+
+/*============Créditos============*/
+
+.credits {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.credits a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credits a:hover {
+    color: #0066ff;
+    text-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
+}
