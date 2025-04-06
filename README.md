@@ -47,7 +47,7 @@ El proyecto está listo para usar. Puedes personalizar los colores, textos y la 
 Las contribuciones son bienvenidas. Para cambios importantes, por favor abre un issue primero para discutir qué te gustaría cambiar.
 
 ## 📄 Licencia
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/gianmattus-programmer/SVG-DEVELOPMENT-SECTION/blob/main/LICENSE)
 
 ## 📫 Contacto
 - GitHub: [@gianmattus-programmer](https://github.com/gianmattus-programmer)
